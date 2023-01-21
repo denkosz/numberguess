@@ -1,34 +1,25 @@
-import random
-def guess(a):
+from random import shuffle
+def shuffle_list(mylist):
+    shuffle(mylist)
+    return mylist
 
-    print(f"You have {a} attempts remaining to guess the number.")
-    user_guess = int(input("Make a guess: "))
-    if a == 1:
-        return print(f"You've run out of guesses, you lose.\nThe correct answer is {computer_num}")
-    if user_guess == computer_num:
-        print(f"You got it! The answer was {computer_num}")
-    if user_guess > computer_num:
-        print("To high.")
-        a = a - 1
-        print("Guess again")
-        guess(a)
-    if user_guess < computer_num:
-        print("Too Low.")
-        a = a - 1
-        print("Guess again")
-        guess(a)
+def player_guess():
+    guess = ""
+    while guess not in ["0", "1", "2"]:
+        guess = input("pick a number: 0, 1, or 2 ! :")
 
-def difficulty():
-    total_c = 5
-    total_b = 10
-    if user_diff == "hard":
-        guess(total_c)
-    elif user_diff == "easy":
-        guess(total_b)
+    return int(guess)
 
+def check_guess(mylist, guess):
+    if mylist[guess] == "O":
+        print("correct")
+    else:
+        print("wrong guess!")
+        print(mylist)
 
-print("Welcome to the Number Guessing Game!")
-print("I'm thinking of a number between 1 and 100.")
-computer_num = random.randint(1, 100)
-user_diff = input("Choose difficulty. Type 'easy' and 'hard': ")
-difficulty()
+example = [1, 2, 3, 4, 5, 6, 7]
+mylist = [" ", "O", " "]
+
+mixedup_list = shuffle_list(mylist)
+guess = player_guess()
+check_guess(mixedup_list, guess)
