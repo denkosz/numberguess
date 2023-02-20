@@ -1,0 +1,75 @@
+# Homemade -------------------------------------
+# userpass = input("Enter new password: ")
+#
+# if len(userpass) >= 8:
+#     empty = None
+#     for m in userpass:
+#         if m.isdigit():
+#             empty = True
+#     if empty:
+#         big = None
+#         for m in userpass:
+#             if m.upper():
+#                 big = True
+#         if big:
+#             print("Strong password")
+#     else:
+#         print("Medium password")
+# else:
+#     print("Weak password")
+#
+# List -------------------------------------
+#
+# password = input("Enter new password: ")
+# result = []
+#
+# if len(password) >=8:
+#     result.append(True)
+# else:
+#     result.append(False)
+#
+# digit = False
+# for i in password:
+#     if i.isdigit():
+#         digit = True
+# result.append(digit)
+#
+# uppercase = False
+# for i in password:
+#     if i.isupper():
+#         uppercase = True
+#
+# result.append(uppercase)
+# print(result)
+# if all(result):
+#     print("Strong password")
+# else:
+#     print("Weak password")
+#
+# Dictionary -------------------------------------
+# password = input("Enter new password: ")
+# result = {}
+# 
+# if len(password) >=8:
+#     result["Length"] = True
+# else:
+#     result["Length"] = False
+# 
+# digit = False
+# for i in password:
+#     if i.isdigit():
+#         digit = True
+# result["Digit"] = digit
+# 
+# uppercase = False
+# for i in password:
+#     if i.isupper():
+#         uppercase = True
+# 
+# result["Upper"] = uppercase
+# print(result)
+# if all(result.values()):
+#     print("Strong password")
+# else:
+#     print("Weak password")
+# 
