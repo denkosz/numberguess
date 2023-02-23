@@ -1,0 +1,30 @@
+
+# 
+# import webbrowser
+# 
+# user_term = input("enter a search term:").replace(" ", "+")
+# 
+# webbrowser.open("http://google.com/search?q=" + user_term)
+# ////////////////////////////////
+# import shutil
+#
+# shutil.make_archive("output", "zip", "files")
+# ////////////////////////////
+# import csv
+#
+# with open("weater.csv", "r") as file:
+#     data = list(csv.reader(file))
+#
+# city = input("enter a city: ")
+#
+# for row in data:
+#     if row[0] == city:
+#         print(row[1])
+# /////////////////////////////////
+# import glob
+#
+# myfiles = glob.glob("files/*.txt")
+#
+# for filepath in myfiles:
+#     with open(filepath, "r") as file:
+#         print(file.read())
