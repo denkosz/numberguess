@@ -5,7 +5,7 @@ with open("questions.json", "r") as file:
 
 data = json.loads(content)
 
-score = 0
+
 for question in data:
     print(question["question_text"])
     for index, alternative in enumerate(question["alternatives"]):
