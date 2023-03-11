@@ -1,0 +1,41 @@
+def position_change(display):
+    print(f"Here is current list \n{display}")
+    answer_correct = True
+    choice = " "
+    while answer_correct:
+        choice = input("Pick a position to replace(0, 1, 2):\n")
+        if choice.isdigit():
+            if int(choice) not in range(0, 3):
+                print("Try pick number in range 1-3!")
+            else:
+                answer_correct = False
+        else:
+            print("Type a number, not string! ")
+    return int(choice)
+
+
+def answer_user():
+    choice = input("What to replace, type a string:\n")
+    return choice
+
+
+def replace_string(display, user_input, position1):
+    display[position1] = user_input
+    print(display)
+
+
+def game_choice():
+    x = input("Do you want continue to play? Y/N ")
+    if x.upper() == "Y":
+        return True
+    elif x.upper() == "N":
+        return False
+
+
+example_list = [" ", " ", " "]
+game_on = True
+while game_on:
+    position = position_change(example_list)
+    answer = answer_user()
+    replace_string(example_list, answer, position)
+    game_on = game_choice()
